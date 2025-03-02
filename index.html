@@ -293,5 +293,18 @@
 
 <script src="chatbot.js"></script>
 
+<script type="module">
+    // Import dependencies from CDN
+    import { ChatOpenAI } from 'https://cdn.jsdelivr.net/npm/langchain@0.0.207/chat_models/openai.min.js';
+    import { HuggingFaceInference } from 'https://cdn.jsdelivr.net/npm/langchain@0.0.207/llms/hf.min.js';
+    import { HuggingFaceTransformersEmbeddings } from 'https://cdn.jsdelivr.net/npm/langchain@0.0.207/embeddings/hf_transformers.min.js';
+    import { MemoryVectorStore } from 'https://cdn.jsdelivr.net/npm/langchain@0.0.207/vectorstores/memory.min.js';
+    import { ConversationalRetrievalQAChain } from 'https://cdn.jsdelivr.net/npm/langchain@0.0.207/chains.min.js';
+    import { BufferMemory } from 'https://cdn.jsdelivr.net/npm/langchain@0.0.207/memory.min.js';
+    
+    // Import the chatbot integration
+    import './js/chatbot-integration.js';
+  </script>
+
 </body>
 </html>
